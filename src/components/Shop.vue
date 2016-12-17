@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <h1>{{shop.name}}</h1>
-    <products :shopId='$route.params.id' :page='$route.query.page' :pageSize='$route.query.pageSize'></products>
-  </div>
+  <div class="small-12 medium-9 columns" data-equalizer-watch>
+    <div class="content">
+      <h1>{{shop.name}}</h1>
+      <products :shopId='$route.params.id' :page='$route.query.page' :pageSize='$route.query.pageSize'></products>
+    </div>
 </template>
 
 <script>

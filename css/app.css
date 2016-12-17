@@ -1,0 +1,71 @@
+div.row {
+    max-width: 1200px;
+}
+
+div.header_image {
+    border-bottom: solid 3px black;
+}
+
+div.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-left: solid 3px black;
+    border-right: solid 3px black;
+}
+
+aside.sidebar {
+    border-right: solid 2px black;
+    height: 100%;
+}
+
+address span {
+    display: block;
+    padding-bottom: 8px;
+}
+
+footer {
+    border-top: solid 2px black;
+    border-bottom: solid 3px black;
+    text-align: center;
+}
+
+input[name="month"],
+input[name="year"] {
+    width: 48%;
+    display: inline-block;
+}
+
+span.order_status,
+span.payment_status,
+span.shipping_status { /* Default, if no status class provided */
+    border: solid 3px black;
+    color: black;
+    background-color: lightgray;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+span.order_status.success,
+span.payment_status.success,
+span.shipping_status.success {
+    border: solid 3px darkgreen;
+    color: darkgreen;
+    background-color: lightgreen;
+}
+
+span.order_status.failure,
+span.payment_status.failure,
+span.shipping_status.failure {
+    border: solid 3px darkred;
+    color: darkred;
+    background-color: pink;
+}
+
+span.order_status.pending,
+span.payment_status.pending,
+span.shipping_status.pending {
+    border: solid 3px orange;
+    color: orange;
+    background-color: yellow;
+}
