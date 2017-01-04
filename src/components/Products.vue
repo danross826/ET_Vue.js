@@ -28,7 +28,7 @@
     },
     methods: {
       getProducts: function() {
-        this.$http.get('http://localhost:8080/trinary-inventory/v1/shop/' + this.shopId + "/items?page=" + this.page + "&pageSize=" + this.pageSize)
+        this.$http.get('http://192.168.1.86:8080/trinary-inventory/v1/shop/' + this.shopId + "/items?page=" + this.page + "&pageSize=" + this.pageSize)
           .then((response) => {
             this.items = response.data
           }, (response) => {
