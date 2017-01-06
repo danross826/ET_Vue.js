@@ -4,6 +4,7 @@
       <h1>{{shop.name}}</h1>
       <products :shopId='$route.params.id' :page='$route.query.page' :pageSize='$route.query.pageSize'></products>
     </div>
+  </div>
 </template>
 
 <script>
