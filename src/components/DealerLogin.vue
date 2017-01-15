@@ -2,15 +2,20 @@
     <div>
         <h2>Log In</h2>
 
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter your username" v-model="credentials.username">
-        </div>
+        <table>
+            <tr>
+                <th>Username</th>
+                <td><input name="username" v-model="credentials.name"/></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><input type="password" name="password" v-model="credentials.password"/></td>
+            </tr>
+            <tr>
+                <button class="btn btn-primary" @click="submit()">Access</button>
+            </tr>
+        </table>
 
-        <div class="form-group">
-            <input type="password" class='form-control' placeholder='Enter your password' v-model='credentials.password'>
-        </div>
-
-        <button class="btn btn-primary" @click="submit()">Access</button>
     </div>
 
 </template>
