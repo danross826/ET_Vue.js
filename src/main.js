@@ -5,8 +5,6 @@ import App  from './App.vue'
 import Shop from './components/Shop.vue'
 import Product from './components/Product.vue'
 
-window.baseUrl = "http://10.0.0.170:8080"
-
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
