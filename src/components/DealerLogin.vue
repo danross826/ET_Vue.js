@@ -1,19 +1,16 @@
 <template>
     <div>
-        <h1>Login</h1>
-        <table>
-            <tr>
-                <th>Username</th>
-                <td><input name="username"/></td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td><input type="password" name="password"/></td>
-            </tr>
-            <tr>
-                <td colspan="2"><input class="button" type="submit"/></td>
-            </tr>
-        </table>
+        <h2>Log In</h2>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter your username" v-model="credentials.username">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class='form-control' placeholder='Enter your password' v-model='credentials.password'>
+        </div>
+
+        <button class="btn btn-primary" @click="submit()">Access</button>
     </div>
 
 </template>
@@ -26,13 +23,11 @@
 export default {
   data() {
     return {
-      credentials: {},
-      error: ''
+      credentials: {}
     }
   },
   methods: {
     submit() {
-
       var credentials = this.credentials;
       this.$router.push({ name: 'dealer_dashboard' })
     }
