@@ -1,34 +1,41 @@
 <template>
+
     <div>
-        <div>
-            <form action=".?page=dashboard" method="post">
-            <table>
-                <tr>
-                    <th>Username</th>
-                    <td><input name="username"/></td>
-                </tr>
-                <tr>
-                    <th>Password</th>
-                    <td><input type="password" name="password"/></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input class="button" type="submit"/></td>
-                </tr>
-            </table>
-        </form>				</div>
+        <h2>Log In</h2>
+        <p>Log in to your account to get some great quotes.</p>
+        <div class="alert alert-danger" v-if="error">
+            <p>{{ error }}</p>
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter your username" v-model="credentials.username">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class='form-control' placeholder='Enter your password' v-model='credentials.password'>
+        </div>
+
+        <button class="btn btn-primary" @click="submit()">Access</button>
     </div>
 </template>
 <style>
     body{
-        background-color:#ff0000;
+        background-color:#FFFFF;
     }
 </style>
 <script>
-    export default{
-        data(){
-            return{
-                msg:'hello vue'
-            }
-        }
+export default {
+  data() {
+    return {
+      credentials: {},
+      error: ''
     }
+  },
+  methods: {
+    submit() {
+
+      var credentials = this.credentials;
+    }
+  }
+}
 </script>
