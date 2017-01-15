@@ -78,8 +78,8 @@
         },
         methods: {
 			addDealer: function() {
-				console.log(this.newDealer);
-				this.newDealer = {};
+				console.log(this.newDealer)
+                this.$router.push({ name: 'dealer_confirmation' })
 			}
 		}
     }

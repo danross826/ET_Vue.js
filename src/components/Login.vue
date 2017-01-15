@@ -35,6 +35,7 @@ export default {
     submit() {
 
       var credentials = this.credentials;
+      this.$router.push({ name: 'dealer_dashboard' })
     }
   }
 }
