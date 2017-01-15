@@ -19,9 +19,9 @@
           </div>
 
           <!-- START COARTNT -->
-          <div class="row" data-equalizer>
+          <div class="row" >
 
-            <aside class="medium-3 show-for-medium-up columns sidebar" data-equalizer-watch>
+            <aside class="medium-3 show-for-medium-up columns sidebar" >
               <form action="#" method="get">
                 <input name="s" placeholder="Product Search"/>
                 <input class="button" type="submit">
@@ -32,8 +32,8 @@
             </aside>
 
             <div>
-              <div class="small-12 medium-9 columns" data-equalizer-watch>
-                <div id="content">
+              <div class="small-12 medium-9 columns" >
+                <div id="content" class="content-box">
                     <router-view>
                         <h2>Admin Console</h2>
                     </router-view>
