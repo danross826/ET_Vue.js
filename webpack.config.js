@@ -39,7 +39,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    port: 80
+    port: 8090
   },
   devtool: '#eval-source-map'
 }
