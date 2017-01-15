@@ -9,6 +9,7 @@
 
 <script>
   import Products from './Products.vue'
+  import config from '../config.js'
 
   export default {
     name: 'shop',
@@ -25,7 +26,7 @@
     },
     methods: {
       getShop: function() {
-        this.$http.get(window.fuckRoot + '/trinary-inventory/v1/shop/' + this.$route.params.id)
+        this.$http.get(config.baseUrl + '/trinary-inventory/v1/shop/' + this.$route.params.id)
           .then((response) => {
             this.shop = response.data
             window.document.title = this.shop.name
