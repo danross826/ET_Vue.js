@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{shop.name}}</h1>
-    <products :shopId='$route.params.id' :page='$route.query.page' :pageSize='$route.query.pageSize'></products>
+    <products :shopId='shopId' :page='page' :pageSize='pageSize'></products>
   </div>
 </template>
 
@@ -20,11 +20,23 @@
       'products': Products
     },
     created: function() {
-      this.getShop()
+      this.page = this.$route.query.page;
+      this.pageSize = this.$route.query.pageSize;
+      this.shopId = this.$route.params.shopId;
+
+      if (this.page == undefined) {
+        this.page = 1;
+      }
+
+      if (this.pageSize == undefined) {
+        this.pageSize = 12;
+      }
+
+      this.getShop();
     },
     methods: {
       getShop: function() {
-        this.$http.get(config.baseUrl + '/trinary-inventory/v1/shop/' + this.$route.params.id)
+        this.$http.get(config.baseUrl + '/trinary-inventory/v1/shop/' + this.shopId)
           .then((response) => {
             this.shop = response.data
             window.document.title = this.shop.name
