@@ -47,14 +47,14 @@
             </tr>
             <tr>
                 <th>Weight</th>
-                <td><input name="weight"/></td>
+                <td><input name="weight" placeholder="weight" v-model="newItem.weight" /></td>
             </tr>
             <tr>
                 <th>Dimensions</th>
                 <td>
-                    <input name="length" placeholder="length"/>
-                    <input name="width" placeholder="width"/>
-                    <input name="depth" placeholder="depth"/>
+                    <input name="length" placeholder="length" v-model="newItem.dimensions.length"/>
+                    <input name="width" placeholder="width" v-model="newItem.dimensions.width"/>
+                    <input name="depth" placeholder="depth" v-model="newItem.dimensions.depth"/>
                 </td>
             </tr>
         </table>
@@ -71,7 +71,10 @@
     export default {
         data () {
             return {
-                newItem: {}
+                newItem: {
+                    attributes: {},
+                    dimensions: {}
+                }
             }
         },
         methods: {
