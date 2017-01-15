@@ -6,7 +6,7 @@ import Shop from './components/Shop.vue'
 import DealerConfirmation from './components/DealerConfirmation.vue'
 import DealerDashboard from './components/DealerDashboard.vue'
 import DealerRegister from './components/DealerRegister.vue'
-import CreateProduct from './components/CreateProduct.vue'
+import ProductCreate from './components/ProductCreate.vue'
 import Login from './components/Login.vue'
 import Product from './components/Product.vue'
 
@@ -22,7 +22,7 @@ const router = new VueRouter({
     { name: 'dealer_confirmation', path: '/dealer/confirm', component: DealerConfirmation },
     { name: 'dealer_dashboard', path: '/dealer/dashboard', component: DealerDashboard },
     { name: 'dealer_register', path: '/dealer/register', component: DealerRegister },
-    { name: 'product_create', path: '/item/create', component: CreateProduct }
+    { name: 'product_create', path: '/item/create', component: ProductCreate }
   ],
   mode: 'history'
 })

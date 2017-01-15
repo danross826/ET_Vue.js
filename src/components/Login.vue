@@ -1,5 +1,4 @@
 <template>
-
     <div>
         <h2>Log In</h2>
         <p>Log in to your account to get some great quotes.</p>
