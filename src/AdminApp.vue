@@ -24,10 +24,14 @@
 					<input name="s" placeholder="Product Search"/>
 					<input class="button" type="submit">
 					</form>
-					<menu class="sidebar_menu">
+					<ul class="sidebar_menu">
 						<li><router-link :to='{name: "admin_app"}'>Home</router-link></li>
 						<li><router-link :to='{name: "dealer_register"}'>Become a Dealer</router-link></li>
-					</menu>
+						<li>Dealer Tools</li>
+						<ul>
+							<li><router-link :to='{name: "dealer_dashboard"}'>Dealer Dashboard</router-link></li>
+						</ul>
+					</ul>
 				</aside>
 
 				<div>
@@ -53,3 +57,9 @@
         }
     }
 </script>
+
+<style type="text/css">
+	ul {
+		list-style-type: none;
+	}
+</style>

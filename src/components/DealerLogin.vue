@@ -1,10 +1,6 @@
 <template>
     <div>
         <h2>Log In</h2>
-        <p>Log in to your account to get some great quotes.</p>
-        <div class="alert alert-danger" v-if="error">
-            <p>{{ error }}</p>
-        </div>
 
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Enter your username" v-model="credentials.username">
@@ -26,13 +22,11 @@
 export default {
   data() {
     return {
-      credentials: {},
-      error: ''
+      credentials: {}
     }
   },
   methods: {
     submit() {
-
       var credentials = this.credentials;
       this.$router.push({ name: 'dealer_dashboard' })
     }

@@ -5,23 +5,19 @@
         <table>
             <tr>
                 <th>Name</th>
-                <td><input name="name"/></td>
+                <td><input name="name" v-model="newItem.name"/></td>
             </tr>
             <tr>
                 <th>Price [USD]</th>
-                <td><input name="price"/></td>
+                <td><input name="price" v-model="newItem.price"/></td>
             </tr>
             <tr>
                 <th>Quantity</th>
-                <td><input type="number" name="quantity"/></td>
+                <td><input type="number" name="quantity" v-model="newItem.quantity"/></td>
             </tr>
             <tr>
-                <th>Short Description</th>
-                <td><textarea name="short_description"></textarea></td>
-            </tr>
-            <tr>
-                <th>Detailed Description</th>
-                <td><textarea name="long_description"></textarea></td>
+                <th>Description</th>
+                <td><textarea name="long_description" v-model="newItem.description"></textarea></td>
             </tr>
             <tr>
                 <th>Image</th>
@@ -32,15 +28,15 @@
             </tr>
             <tr>
                 <th>SKU</th>
-                <td><input name="sku"/></td>
+                <td><input name="sku" v-model="newItem.attributes.sku"/></td>
             </tr>
             <tr>
                 <th>UPC</th>
-                <td><input name="upc"/></td>
+                <td><input name="upc" v-model="newItem.attributes.upc"/></td>
             </tr>
             <tr>
                 <th>Manufacturer</th>
-                <td><input name="manufacturer"/></td>
+                <td><input name="manufacturer" v-model="newItem.attributes.manufacturer"/></td>
             </tr>
             <tr>
                 <th>Category</th>
@@ -81,7 +77,7 @@
         methods: {
 			addItem: function() {
 				console.log(this.newItem);
-				this.newItem = {};
+                // TODO Add REST call here
 			}
 		}
     }
