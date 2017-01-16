@@ -12,6 +12,7 @@ import DealerDashboard from './components/DealerDashboard.vue'
 import DealerRegister from './components/DealerRegister.vue'
 import ProductCreate from './components/ProductCreate.vue'
 import DealerLogin from './components/DealerLogin.vue'
+import Cart from './components/Cart.vue'
 
 import Product from './components/Product.vue'
 
@@ -25,7 +26,8 @@ const router = new VueRouter({
     	children: [
     		{ name: 'shop_app', path: '', component: Shops },
     		{ name: 'shop', path: ':shopId', component: Shop },
-    		{ name: 'product', path: ':shopId/item/:itemId', component: Product }
+    		{ name: 'product', path: ':shopId/item/:itemId', component: Product },
+			{ name: 'cart', path: ':shopId/cart', component: Cart }
     	] 
     },
     { path: '/admin', component: AdminApp,
