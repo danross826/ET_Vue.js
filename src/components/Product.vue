@@ -30,6 +30,7 @@
 
 <script>
 	import config from '../config.js'
+	import cartState from '../cartState.js'
 
   	export default {
 	    name: "products",
@@ -60,7 +61,7 @@
 	          	});
 	      	},
 	      	addToCart: function() {
-
+	      		cartState.addToCart(this.$route.params.shopId, this.item);
 	      	}
     	}
   	}
