@@ -18,7 +18,6 @@ export default {
   },
   getCart: function(shopId) {
     var shopIndex = "shop" + shopId;
-    console.log(shopIndex);
     return this.data.carts[shopIndex];
   },
   incrementItemInCart: function(shopId, productId) {

@@ -4,7 +4,7 @@
                 <div class="content">
                     <h1>Cart</h1>
 
-                    <table>
+                    <table v-if="cart != undefined && cart.length != 0">
                         <thead>
                         <tr>
                             <th>Thumbnail</th>
@@ -30,6 +30,7 @@
                         </tr>
                         </tfoot>
                     </table>
+                    <p v-if="cart == undefined || cart.length == 0">Your cart is empty!</p>
                     <button class="btn btn-primary" @click="submit()">Checkout</button>
                 </div>
             </div>
