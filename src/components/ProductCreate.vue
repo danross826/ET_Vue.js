@@ -52,9 +52,9 @@
             <tr>
                 <th>Dimensions</th>
                 <td>
-                    <input name="length" placeholder="length" v-model="newItem.dimensions.length"/>
-                    <input name="width" placeholder="width" v-model="newItem.dimensions.width"/>
-                    <input name="depth" placeholder="depth" v-model="newItem.dimensions.depth"/>
+                    <input name="length" placeholder="length" v-model="newItem.dimension.length"/>
+                    <input name="width" placeholder="width" v-model="newItem.dimension.width"/>
+                    <input name="depth" placeholder="depth" v-model="newItem.dimension.depth"/>
                 </td>
             </tr>
         </table>
@@ -73,7 +73,7 @@
             return {
                 newItem: {
                     attributes: {},
-                    dimensions: {}
+                    dimension: {}
                 }
             }
         },

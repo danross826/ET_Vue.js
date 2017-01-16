@@ -15,14 +15,15 @@
     name: "products",
     data () {
       return {
-        items: [
-        ],
+        items: [],
         shop : {}
       }
     },
     created: function() {
-      this.shop.id = this.shopId
       this.getProducts()
+    },
+    watch: {
+      '$route': 'getProducts'
     },
     filters: {
       currency: function(price) {
@@ -31,6 +32,8 @@
     },
     methods: {
       getProducts: function() {
+        this.shop.id = this.shopId
+        
         this.$http.get(config.baseUrl + '/trinary-inventory/v1/shop/' + this.shopId + "/items?page=" + this.page + "&pageSize=" + this.pageSize)
           .then((response) => {
             this.items = response.data
