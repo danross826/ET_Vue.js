@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
-import Vuex from 'vuex'
 
 import AdminApp  from './AdminApp.vue'
 import ShopApp  from './ShopApp.vue'
@@ -16,10 +15,11 @@ import DealerDashboard from './components/DealerDashboard.vue'
 import DealerRegister from './components/DealerRegister.vue'
 import ProductCreate from './components/ProductCreate.vue'
 import DealerLogin from './components/DealerLogin.vue'
+import Checkout from './components/Checkout.vue'
+import OrderConfirmation from './components/OrderConfirmation.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
-Vue.use(Vuex)
 
 const router = new VueRouter({
   routes: [
@@ -28,8 +28,10 @@ const router = new VueRouter({
     	children: [
     		{ name: 'shop_app', path: '', component: Shops },
     		{ name: 'shop', path: ':shopId', component: Shop },
-        { name: 'cart', path: ':shopId/cart', component: Cart },
-    		{ name: 'product', path: ':shopId/item/:itemId', component: Product }
+    		{ name: 'product', path: ':shopId/item/:itemId', component: Product },
+			{ name: 'cart', path: ':shopId/cart', component: Cart },
+			{ name: 'checkout', path: ':shopId/checkout', component: Checkout },
+			{ name: 'order_confirmation', path: ':shopId/order_confirmation', component: OrderConfirmation }
     	] 
     },
     { path: '/admin', component: AdminApp,
@@ -39,7 +41,8 @@ const router = new VueRouter({
 		    { name: 'dealer_dashboard', path: 'dealer/dashboard', component: DealerDashboard },
 		    { name: 'dealer_register', path: 'dealer/register', component: DealerRegister },
 		    { name: 'dealer_login', path: 'dealer/login', component: DealerLogin },
-		    { name: 'product_create', path: 'item/create', component: ProductCreate }
+		    { name: 'product_create', path: 'item/create', component: ProductCreate },
+			{ name: 'checkout', path: 'item/create', component: ProductCreate }
     	] 
     }
   ],
