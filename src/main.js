@@ -7,16 +7,16 @@ import ShopApp  from './ShopApp.vue'
 
 import Shop from './components/Shop.vue'
 import Shops from './components/Shops.vue'
+import Cart from './components/Cart.vue'
+import Product from './components/Product.vue'
+
 import DealerConfirmation from './components/DealerConfirmation.vue'
 import DealerDashboard from './components/DealerDashboard.vue'
 import DealerRegister from './components/DealerRegister.vue'
 import ProductCreate from './components/ProductCreate.vue'
 import DealerLogin from './components/DealerLogin.vue'
-import Cart from './components/Cart.vue'
 import Checkout from './components/Checkout.vue'
 import OrderConfirmation from './components/OrderConfirmation.vue'
-
-import Product from './components/Product.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)

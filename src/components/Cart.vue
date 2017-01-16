@@ -1,4 +1,3 @@
-
 <template>
     <div class="cart">
         <div class="row">
@@ -16,30 +15,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <!-- Product 1 -->
-                        <tr>
-                            <td></td>
-                            <td>Product Name</td>
-                            <td><input type="number" value="5"/></td>
-                            <td>$10.99</td>
-                            <td>$10.99</td>
-                        </tr>
-                        <!-- Product 2 -->
-                        <tr>
-                            <td></td>
-                            <td>Product Name</td>
-                            <td><input type="number" value="5"/></td>
-                            <td>$10.99</td>
-                            <td>$10.99</td>
-                        </tr>
-                        <!-- Product 3 -->
-                        <tr>
-                            <td></td>
-                            <td>Product Name</td>
-                            <td><input type="number" value="5"/></td>
-                            <td>$10.99</td>
-                            <td>$10.99</td>
-                        </tr>
+                            <tr v-for="item in cart">
+                                <td></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.price}}</td>
+                                <td>{{item.price * item.quantity}}</td>
+                            </tr>
                         </tbody>
                         <tfoot>
                         <tr>
@@ -55,17 +37,19 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      credentials: {}
+    import cartState from '../cartState.js';
+
+    export default {
+      computed: {
+        cart: function() {
+            return cartState.getCart(this.$route.params.shopId);
+        }
+      },
+      methods: {
+        submit() {
+          var credentials = this.credentials;
+          this.$router.push({ name: 'checkout' })
+        }
+      }
     }
-  },
-  methods: {
-    submit() {
-      var credentials = this.credentials;
-      this.$router.push({ name: 'checkout' })
-    }
-  }
-}
 </script>

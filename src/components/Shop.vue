@@ -24,7 +24,7 @@
       'paginator': Paginator
     },
     created: function() {
-      this.getShop();
+      this.getShop();  
     },
     watch: {
       '$route': 'getShop'

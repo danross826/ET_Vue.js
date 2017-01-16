@@ -8,7 +8,7 @@
                 <ul class="right">
                   <li><router-link :to='{name: "shop_app"}'>Home</router-link></li>
                   <li><a href="#" data-reveal-id="myModal">Find an FFL</a></li>
-                  <li><a href="/cart">Cart</a></li>
+                  <li><router-link :to='{name: "cart", params: {shopId: 3}}'>Cart</router-link></li>
                 </ul>
               </section>
             </nav>
@@ -34,9 +34,7 @@
             <div>
               <div class="small-12 medium-9 columns" >
                 <div id="content" class="content-box">
-                    <router-view>
-                        <h2>Admin Console</h2>
-                    </router-view>
+                    <router-view></router-view>
                 </div>
               </div>
             </div>
@@ -53,7 +51,7 @@
 <script>
     export default {
         created: function() {
-            window.document.title = "Trinventory Shop Service"     
+            window.document.title = "Trinventory Shop Service"; 
         }
     }
 </script>
